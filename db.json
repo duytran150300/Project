@@ -1,0 +1,20 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "123abcABC"
+    }
+  ],
+  "products": [
+    {
+      "name": "KaKa Okela",
+      "author": "Brazil",
+      "age": 32,
+      "img": "/img/anh2.jpg",
+      "club": "Liverpool",
+      "salary": 1200,
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+
+.fz-24{
+  font-size: 24px;
+}
+
+/* header */
+
+.head{
+  padding-left: 0;
+  padding-right: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: #fff;
+}
+
+.navrbar {
+  top: 9.4%;
+  background-color: #e6e6e6;
+}
+.header{
+  margin-top: -24px;
+}
+.header_logo .logo{
+  width: 40%;
+  margin-left: 28px;
+
+}
+.header_logout .fa-regular, .offcanvas-body .fa-regular{
+  font-size: 18px;
+  color: green;
+  margin-right: 14px;
+
+}
+.offcanvas-body .fa-regular{
+  margin-top: 12px;
+}
+.header_logout .fa-regular:hover{
+  cursor: pointer;
+  color: rgb(4, 109, 4);
+}
+.admin{
+  color: green;
+  text-align: center;
+}
+.nav-link{
+  font-size: 16px;
+  color: rgb(3, 106, 3);
+  font-weight: 500;
+}
+.nav-link:hover{
+  color: rgb(6, 183, 6);
+
+}
+.active{
+  background-color:  #fff;
+}
+/* icon close newAdd */
+.btn-close{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.btn_newAdd:focus, .form-control:focus,  .btn-outline-success:focus{
+  box-shadow: none;
+}
+.input-group>.form-control:focus{
+  z-index: 0;
+  border-color: #ced4da;
+}
+/* container */
+.container .title {
+  color: green;
+}
+
+.listPage{
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+}
+.listPage li{
+  padding: 8px;
+  background-color: #ffffffDB;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+
+}
+.tbody{
+  overflow: hidden;
+}
+.listPage .active{
+  background-color: #198754;
+  color: #fff;
+}
+.display_info {
+  padding-left: 3rem;
+}
+/* footer */
+.infor{
+  list-style: none;
+  font-size: 18px;
+}
+.fw-500{
+  font-weight: 500;
+}
+.infor a{
+  text-decoration: none;
+  font-size: 16px;
+  color: #000000cf;
+}
+.infor a:hover{
+  opacity: 0.8;
+}
+.infor i{
+  margin-right: 12px;
+}
+.icon-fb {
+  color: #1b74e4;
+}
+
+.icon-instagram {
+   color: #ff4b20;
+}
+
+.icon-youtube {
+  color: red;
+}
+
+.icon-tiktok {
+  color: black;
+}
+.contact-info i{
+  margin-right: 12px;
+}
+footer {
+  background: #EDEDED;
+}
+//
+        /* CSS styles go here */
+
+        @media (max-width: 575px) {
+          /* Styles for screens with width <= 768px */
+          /* .header_navlo,
+          .header_search,
+          .header_logout {
+              display: none;
+          } */
+          .header_logout{
+              display: none;
+          }
+
+
+          /* header */
+          .btn{
+              border: none;
+
+          }
+          .btn-check:active+.btn-outline-success:focus, .btn-check:checked+.btn-outline-success:focus, .btn-outline-success.active:focus, .btn-outline-success.dropdown-toggle.show:focus, .btn-outline-success:active:focus {
+              box-shadow: none;
+          }
+          .btn-check:focus+.btn-outline-success, .btn-outline-success:focus {
+              box-shadow: none;
+          }
+
+          .btn-outline-success:hover {
+              color: #198754;
+              background-color: transparent;
+              border-color: transparent;
+          }
+          .header_logo .logo {
+              width: 100%;
+              margin-left: -6px;
+          }
+          .header_logout .fa-regular {
+              font-size: 12px;
+              color: green;
+              margin-right: 8px;
+          }
+          .header_logout-logout{
+              padding: 0px 3px 2px 3px;
+              font-size: 12px;
+          }
+
+          .navrbar {
+              top: 7.6%;
+              background-color: #e6e6e6;
+              width: 100%;
+          }
+
+          .header_search .fa-search{
+              font-size: 14px;
+          }
+          .header_navlo, .header_logout {
+              flex: 1;
+          }
+          .header_search{
+              flex: 2;
+          }
+          .input-group {
+              align-items: center;
+          }
+          .form-control{
+              padding: 0 6px;
+          }
+          thead th{
+              font-size: 14px;
+          }
+          tbody td{
+              font-size: 12px;
+          }
+
+          /* container */
+
+          .container .title {
+              font-size: 18px;
+          }
+
+
+          /* footer */
+          .text-black{
+              font-size: 15px;
+          }
+          .infor a {
+              font-size: 12px;
+          }
+          .infor li {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 12px;
+          }
+          .contact-info p {
+              font-size: 12px;
+          }
+          .offcanvas{
+              width: 100%;
+          }
+      }
+
+      @media (min-width: 576px) and (max-width: 767px) {
+          /* Styles for screens with width <= 576px */
+          /* .header_logo {
+              text-align: center;
+          } */
+          .header_logout{
+              display: none;
+          }
+          .header_navlo, .header_logout {
+              flex: 1;
+          }
+          .header_search{
+              flex: 2;
+          }
+          .header_logo .logo {
+              width: 65%;
+              margin-left: 28px;
+          }
+          .navrbar {
+              top: 9.3%;
+              background-color: #e6e6e6;
+          }
+          .input-group{
+              width: 96%;
+          }
+
+
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+          .navrbar {
+              top: 6.8%;
+              background-color: #e6e6e6;
+          }
+
+      }
+      @media (min-width: 1024px) and (max-width: 1279px) {
+          .navrbar {
+              top: 13.3%;
+              background-color: #e6e6e6;
+          }
+
+      }
+
+      @media (min-width: 1280px) and (max-width: 1366px) {
+          .navrbar {
+              top: 10%;
+              background-color: #e6e6e6;
+          }
+
+      }
+      @media (max-width: 1280px) {
+          .header_search{
+              display: block;
+          }
+          .header_search-max {
+              display: none;
+          }
+      }
+      /* màn 1366 */
+      @media (min-width: 1366px) {
+
+          .navigation {
+              display: none;
+          }
+          .header_search{
+              display: none;
+          }
+
+      }
+      @media (max-width: 1367px) {
+
+          .header_logout{
+              display: none !important;
+          }
+          .header_search-max {
+              display: block;
+          }
+      }

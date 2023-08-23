@@ -1,0 +1,311 @@
+  <div id="app">
+      <div class="container-fluid head ">
+          <header class="header py-3 d-flex justify-content-around align-items-center shadow-lg mb-5">
+              <div class="header_navlo d-flex align-items-center">
+                  <!-- offcavas -->
+                  <div class="header_offcanvas my-auto">
+                      <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas"
+                          data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                              class="fa-solid fa-bars"></i></button>
+                      <div class="offcanvas offcanvas-start navrbar shadow-sm p-3" data-bs-scroll="true"
+                          data-bs-backdrop="true" tabindex="-1" id="offcanvasScrolling"
+                          aria-labelledby="offcanvasScrollingLabel">
+                          <div class="offcanvas-header justify-content-center admin">
+                              <h3 class="offcanvas-title" id="offcanvasScrollingLabel" class="text-center admin">
+                                  <i class="fa-solid fa-house"></i>
+                                  Admin
+                              </h3>
+                              <img src="" alt="">
+                              <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                              aria-label="Close"></button> -->
+                          </div>
+                          <div class="offcanvas-body">
+                              <ul class="nav flex-column">
+                                  <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                                  <li class="nav-item active"><a class="nav-link" href="">Profile</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="">Employee manager</a></li>
+                                  <!-- <li class="nav-item"><a class="nav-link" href="">Quản lý danh mục</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="">Khác</a></li> -->
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- logo -->
+                  <div class="header_logo ">
+                      <img src="./img/logo xanh (1).png" alt="logo" class="logo ml-3">
+                  </div>
+                  <!-- search -->
+              </div>
+              <div class="header_search">
+                  <div class="input-group ">
+                      <input type="text" class="form-control search" placeholder="Search...">
+                      <button class="btn btn-outline-success search_btn" type="button">
+                          <i class="fas fa-search"></i>
+                      </button>
+                  </div>
+              </div>
+
+
+              <!-- navbar >1366 -->
+              <div class="navigation">
+                  <button class="btn btn-outline-warning " type="button" data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                          class="fa-brands fa-microsoft"></i></button>
+
+                  <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight"
+                      aria-labelledby="offcanvasRightLabel">
+                      <div class="offcanvas-header">
+                          <h3 class="offcanvas-title" id="offcanvasScrollingLabel" class="text-center admin">
+                              <i class="fa-solid fa-house"></i>
+                              Admin
+                          </h3>
+                          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                              aria-label="Close"></button>
+                      </div>
+                      <div class="offcanvas-body d-flex justify-content-around ">
+                          <div class=""><button type="button"
+                                  class="btn btn-success header_logout-logout ">Logout</button></div>
+                          <i class="fa-regular fa-envelope"></i>
+                          <i class="fa-regular fa-user"></i>
+                          <i class="fa-regular fa-bell"></i>
+                      </div>
+                  </div>
+              </div>
+
+
+              <!-- end -->
+              <!-- logout -->
+              <div class="header_logout d-flex justify-content-center align-items-center">
+                  <div class="header_search-max mx-5">
+                      <div class="input-group ">
+                          <input type="text" class="form-control search" id="search" placeholder="Search...">
+                          <button class="btn btn-outline-success search_btn" id="search_btn" type="button">
+                              <i class="fas fa-search"></i>
+                          </button>
+                      </div>
+                  </div>
+                  <div class="">
+                      <i class="fa-regular fa-envelope"></i>
+                      <i class="fa-regular fa-user"></i>
+                      <i class="fa-regular fa-bell"></i>
+                      <button type="button" class="btn btn-success header_logout-logout">Logout</button>
+
+                  </div>
+              </div>
+          </header>
+
+
+      </div>
+
+
+      <!-- container -->
+      <div class="container my-5 ">
+          <div class="row mt-5 ">
+              <h2 class="text-center title">DANH SÁCH NHÂN VIÊN</h2>
+              <div class="table-responsive">
+                  <div id="modal" class="modal shadow-lg">
+                      <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- Thêm class modal-lg ở đây -->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Thông tin nhân viên</h5>
+                            <button type="button" class="btn btn-primary close" data-bs-dismiss="modal">&times;</button>
+                          </div>
+                          <div class="modal-body d-flex justify-content-center ">
+                            <div class="display_img"></div>
+                            <div class="display_info"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="d-flex justify-content-end">
+                      <button class="btn btn-outline-success my-3 btn_newAdd" data-bs-toggle = "modal" data-bs-target="#exampleModal"  >
+                          ADD NEW <i class="fa-solid fa-plus"></i>
+                      </button>
+                  </div>
+
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"  aria-hidden="true" >
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="p-4">
+                                  <h2 class="modal-title text-center text-success" id = "exampleModalLabel ">ADD NEW EMPLOYEE</h2>
+                                  <button type="button" class="btn-close fz-24" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  <div class="modal-body">
+                                      <form action="" method="post" enctype="multipart/form-data" [formGroup]="formValue">
+                                          <div class="mt-4">
+                                              <label for="">Name:</label>
+                                              <input class="form-control mt-2 " type="text" formControlName = "name" placeholder="Code...">
+                                          </div>
+                                          <div class="mt-4">
+                                              <label for="">Country:</label>
+                                              <input class="form-control mt-2 " type="text" formControlName = "country" placeholder="Name...">
+                                          </div>
+
+                                          <div class="mt-4">
+                                              <label for="">Image:</label>
+                                              <input class="form-control mt-2 " type="file" formControlName = "country" placeholder="Image...">
+                                          </div>
+                                          <div class="mt-4">
+                                              <label for="">Age:</label>
+                                              <input class="form-control mt-2 " type="text" formControlName = "image"  placeholder="Address...">
+                                          </div>
+                                          <div class="mt-4">
+                                              <label for="">CLUB:</label>
+                                              <input class="form-control mt-2 " type="text" formControlName = "club"  placeholder="Phone...">
+                                          </div>
+                                          <div class="mt-4">
+                                              <label for="">Salary:</label>
+                                              <input class="form-control mt-2 " type="text"  formControlName = "salary" placeholder="Salary...">
+                                          </div>
+
+                                          <input type="submit" class="d-block mx-auto mt-4 p-2 border-0 btn-warning rounded-2 submit" data-bs-dismiss="modal" value="ADD EMPLOYEE">
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+
+                  <table class="table table-hover mt-3 table-bordered table-striped" border="1" cellpadding="0"
+                      cellspacing="0">
+                      <thead class="text-center">
+                          <tr>
+                              <th scope="col-1" width=5%>STT</th>
+                              <th scope="col-1">NAME</th>
+                              <th scope="col-2">COUNTRY</th>
+                              <th scope="col-2">IMAGE</th>
+                              <th scope="col-2">CLUB</th>
+                              <th scope="col-3">SALARY </th>
+
+                          </tr>
+                      </thead>
+                      <tbody class="tbody text-center" id="dataApi">
+                          <!-- <tr class="row mt-5 showInfo">
+                              <td class="display_img col-lg-6 col-md-6 col-12"></td>
+                              <td class="display_info col-lg-6 col-md-6 col-12"></td>
+                          </tr> -->
+
+                      </tbody>
+                  </table>
+
+                  <div class="listPage">
+                      <li class="active ">1</li>
+                      <li class="btn-outline-success">2</li>
+                      <li class="btn-outline-success">3</li>
+                   </div>
+
+                  <div class="modal fade" id="editInfoEmployee" tabindex="-1" aria-labelledby="editInfoEmployee"  aria-hidden="true" >
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="p-4">
+                                  <h2 class="modal-title text-center text-success" id = "editInfoEmployee ">SỬA THÔNG TIN NHÂN VIÊN</h2>
+                                  <button type="button" class="btn-close fz-24" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  <div class="modal-body">
+                                      <form action="" method="post" enctype="multipart/form-data">
+                                          <div class="mt-4">
+                                              <label for="">Mã nhân viên:</label>
+                                              <input class="form-control mt-2 " type="text" name = "code" id = "code" placeholder="Code..." >
+                                          </div>
+                                          <div class="mt-4">
+                                              <label for="">Họ tên nhân viên:</label>
+                                              <input class="form-control mt-2 " type="text" name = "name" id = "name" placeholder="Name...">
+                                          </div>
+
+                                          <div class="mt-4">
+                                              <label for="">Ảnh nhân viên:</label>
+                                              <input class="form-control mt-2 " type="file" name = "img" id = "img" placeholder="Image...">
+                                              <p>Ảnh cũ</p>
+                                              <img id="avatarImage" src="img/" alt="Avatar" width="80">
+                                          </div>
+                                          <div class="mt-4">
+                                              <label for="">Đia chỉ:</label>
+                                              <input class="form-control mt-2 " type="text" name = "address" id = "address" placeholder="Address...">
+                                          </div>
+                                          <div class="mt-4">
+                                              <label for="">Điện thoại:</label>
+                                              <input class="form-control mt-2 " type="text" name = "phone" id = "phone" placeholder="Phone...">
+                                          </div>
+                                          <div class="mt-4">
+                                              <label for="">Lương nhân viên:</label>
+                                              <input class="form-control mt-2 " type="text" name = "salary" id = "salary" placeholder="Salary...">
+                                          </div>
+                                          <div class="mt-4">
+                                              <label for="">Ghi chú:</label>
+                                              <textarea name="note" class="note-textarea w-100 mt-2" cols="3" rows="4"></textarea>
+                                          </div>
+                                          <input type="submit" class="d-block mx-auto mt-4 p-2 border-0 btn-warning rounded-2 edit" data-bs-dismiss="modal" value="Sửa thông tin nhân viên">
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+
+          </div>
+      </div>
+      <!-- footer -->
+
+      <footer class="shadow-sm">
+          <section class="section mt-5 py-5">
+              <div class="container-fluid ">
+                  <div class="container">
+
+                      <div class="row justify-content-center align-items-top g-2">
+                          <div class="col-lg-3 col-md-6 col-6">
+                              <h3 class=" text-black fw-500">Thông tin</h3>
+                              <ul class="infor">
+                                  <li><a href="#">Về chúng tôi</a></li>
+                                  <li><a href="#">Liên hệ</a></li>
+                              </ul>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-6">
+                              <h3 class=" text-black fw-500">Dịch vụ</h3>
+                              <ul class="infor">
+                                  <li><a href="#">FSEL</a></li>
+                                  <li><a href="#">Đào tạo FE</a></li>
+                                  <li><a href="#">Đào tạo FE</a></li>
+                              </ul>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-6">
+                              <h3 class=" text-black fw-500">Theo dõi</h3>
+                              <ul class="infor my-3">
+                                  <li>
+                                      <i class="fa-brands fa-facebook icon-fb"></i>
+                                      <a href="#"> Facebook</a>
+                                  </li>
+                                  <li>
+                                      <i class="fa-brands fa-instagram icon-instagram"></i>
+                                      <a href="#"> Instagram</a>
+                                  </li>
+                                  <li>
+                                      <i class="fa-brands fa-youtube icon-youtube"></i>
+                                      <a href="#">Youtube</a>
+                                  </li>
+                                  <li>
+                                      <i class="fa-brands fa-tiktok icon-tiktok"></i>
+                                      <a href="#"> TikTok</a>
+                                  </li>
+                              </ul>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-6">
+                              <h3 class=" text-black fw-500">Liên hệ</h3>
+                              <div class="infor contact-info">
+                                  <p><i class="fa fa-map-marker"></i>Văn Trì-Minh Khai-Từ Liêm-Hà Nội</p>
+                                  <p><i class="fa fa-phone"></i>0339323611</p>
+                                  <p><i class="fa fa-envelope"></i>duytnph30928@fpt.edu.vn</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
+          </section>
+      </footer>
+
+  </div>
+
+

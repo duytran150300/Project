@@ -1,0 +1,18 @@
+.container-fluid {
+  height: 100vh;
+  background: #A5CAD2;
+  background: linear-gradient(#A5CAD2, #ffb1b9);
+}
+.card {
+  background: rgba(128, 119, 146, 0.6352941176);
+  background: linear-gradient(rgba(192, 200, 202, 0.368627451), rgba(253, 215, 219, 0.3803921569));
+  border-color: #ffffff;
+}
+.btnLogin {
+  background: linear-gradient(90deg, hsl(205, 46%, 30%) 0%, hsl(260, 29%, 36%) 100%);
+  background-color: transparent;
+  border-color: rgba(1, 194, 253, 0.3333333333);
+}
+.btnLogin:hover {
+  border-color: #00d5ff;
+}
